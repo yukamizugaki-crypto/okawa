@@ -1,0 +1,1121 @@
+/* ==========================================================================
+   割烹 大川 - 共通スタイルシート (style.css)
+   ========================================================================== */
+
+/* Google Fonts から和風の書体をインポート */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Sansita+Swashed&display=swap');
+
+/* --- デザインシステム変数 --- */
+:root {
+  --bg-color-main: #fcfaf2;      /* 温かみのある和紙風の薄いベージュ */
+  --bg-color-sub: #f3edd8;       /* 落ち着いたトーンのセカンド背景 */
+  --text-color-main: #2c2520;    /* 墨のような焦げ茶色 */
+  --text-color-sub: #665b53;     /* 落ち着いた薄めの茶色 */
+  --color-primary: #1d3557;      /* 深い藍色（信頼感・和風の締め） */
+  --color-accent: #c94a29;       /* 朱色・柿色（アクセント、完全予約制などの強調） */
+  --color-border: #dcd0b4;       /* 障子の桟のようなソフトな境界線 */
+  --font-family-serif: 'Noto Serif JP', 'Georgia', serif;
+  --font-family-sans: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  --max-width: 1100px;
+  --transition-speed: 0.3s;
+}
+
+/* --- リセット & 基本設定 --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-serif);
+  background-color: var(--bg-color-main);
+  color: var(--text-color-main);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+}
+
+/* --- ユーティリティクラス --- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.font-sans {
+  font-family: var(--font-family-sans);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 50px 0;
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+  box-shadow: 0 4px 6px rgba(201, 74, 41, 0.2);
+}
+
+.btn:hover {
+  background-color: #aa3d20;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.badge-reservation {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-family: var(--font-family-sans);
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* --- ヘッダー・ナビゲーション --- */
+header {
+  background-color: rgba(252, 250, 242, 0.95);
+  border-bottom: 2px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo a {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-main {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  letter-spacing: 0.1em;
+}
+
+.logo-sub {
+  font-size: 0.75rem;
+  font-family: var(--font-family-sans);
+  color: var(--text-color-sub);
+  letter-spacing: 0.05em;
+  margin-top: -4px;
+}
+
+/* デスクトップ用ナビゲーション */
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 700;
+  position: relative;
+  padding: 5px 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-speed) ease-in-out;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-link.active {
+  color: var(--color-accent);
+}
+
+.nav-link.active::after {
+  background-color: var(--color-accent);
+  transform: scaleX(1);
+}
+
+/* ハンバーガーメニューボタン */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  z-index: 102;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-primary);
+  position: absolute;
+  transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+
+.hamburger-line::before,
+.hamburger-line::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-primary);
+  position: absolute;
+  transition: transform var(--transition-speed) ease, top var(--transition-speed) ease, bottom var(--transition-speed) ease;
+}
+
+.hamburger-line::before {
+  top: -8px;
+}
+
+.hamburger-line::after {
+  bottom: -8px;
+}
+
+/* ハンバーガーメニュー開いた状態の変形 */
+.hamburger.is-active .hamburger-line {
+  background-color: transparent;
+}
+
+.hamburger.is-active .hamburger-line::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.hamburger.is-active .hamburger-line::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+/* モバイル用ナビゲーションオーバーレイ */
+.nav-overlay {
+  display: none;
+}
+
+/* --- フッター --- */
+footer {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 60px 0 20px 0;
+  border-top: 4px solid var(--color-accent);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.footer-logo .logo-main {
+  color: #ffffff;
+}
+
+.footer-logo .logo-sub {
+  color: #b0c4de;
+}
+
+.footer-info p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-links h3,
+.footer-sns h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 10px;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a:hover {
+  color: #f3edd8;
+  text-decoration: underline;
+}
+
+.footer-sns-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255,255,255,0.1);
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-family: var(--font-family-sans);
+  transition: background-color var(--transition-speed);
+}
+
+.footer-sns-link:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.85rem;
+  color: #b0c4de;
+  font-family: var(--font-family-sans);
+}
+
+/* --- ページ共通装飾 --- */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--color-primary);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* ==========================================================================
+   個別ページスタイル
+   ========================================================================== */
+
+/* --- トップページ (index.html) --- */
+.hero {
+  position: relative;
+  height: 500px;
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.hero-tagline {
+  font-size: 1.4rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+.hero-title {
+  font-size: 3.8rem;
+  letter-spacing: 0.15em;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* メッセージセクション */
+.intro-text-box {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  padding: 50px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-lead {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.intro-desc {
+  font-size: 1.1rem;
+  color: var(--text-color-sub);
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .intro-text-box {
+    padding: 30px 20px;
+  }
+  .intro-lead {
+    font-size: 1.25rem;
+  }
+  .intro-desc {
+    font-size: 1rem;
+  }
+}
+
+/* フグ大々的打ち出しセクション */
+.fugu-featured-section {
+  background-color: var(--bg-color-sub);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.fugu-featured-card {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border: 1px solid var(--color-border);
+}
+
+.fugu-featured-img {
+  flex: 1.2;
+  min-height: 380px;
+  background-size: cover;
+  background-position: center;
+}
+
+.fugu-featured-content {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fugu-featured-badge {
+  align-self: flex-start;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  padding: 4px 12px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+}
+
+.fugu-featured-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.fugu-featured-desc {
+  font-size: 1.1rem;
+  color: var(--text-color-main);
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.fugu-featured-btn-wrap {
+  margin-top: auto;
+}
+
+@media (max-width: 992px) {
+  .fugu-featured-card {
+    flex-direction: column;
+  }
+  .fugu-featured-img {
+    min-height: 300px;
+  }
+  .fugu-featured-content {
+    padding: 30px;
+  }
+  .fugu-featured-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* フグ3点プレビューグリッド */
+.fugu-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.fugu-preview-item {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+  transition: transform var(--transition-speed);
+}
+
+.fugu-preview-item:hover {
+  transform: translateY(-5px);
+}
+
+.fugu-preview-img-wrap {
+  height: 200px;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.fugu-preview-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed);
+}
+
+.fugu-preview-item:hover .fugu-preview-img-wrap img {
+  transform: scale(1.05);
+}
+
+.fugu-preview-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.fugu-preview-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.fugu-preview-text {
+  font-size: 0.95rem;
+  color: var(--text-color-sub);
+}
+
+@media (max-width: 768px) {
+  .fugu-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ホームアクセス簡易セクション */
+.home-info-section {
+  background-color: #ffffff;
+  border-top: 1px solid var(--color-border);
+}
+
+.home-info-columns {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.home-info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.home-info-table th,
+.home-info-table td {
+  padding: 15px 10px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.home-info-table th {
+  font-weight: bold;
+  color: var(--color-primary);
+  width: 30%;
+  font-size: 1rem;
+}
+
+.home-info-table td {
+  color: var(--text-color-main);
+  font-family: var(--font-family-sans);
+}
+
+.home-info-map-wrap {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  .home-info-columns {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .home-info-map-wrap {
+    height: 250px;
+  }
+}
+
+/* --- お品書きページ (menu.html) --- */
+.page-header {
+  background-color: var(--bg-color-sub);
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+  padding: 60px 0;
+}
+
+.page-header h1 {
+  font-size: 2.6rem;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  color: var(--text-color-sub);
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 40px 0;
+  }
+  .page-header h1 {
+    font-size: 2rem;
+  }
+}
+
+.menu-section {
+  padding: 60px 0;
+}
+
+.menu-section:nth-of-type(even) {
+  background-color: #ffffff;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.menu-sub-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 30px;
+  border-left: 4px solid var(--color-accent);
+  padding-left: 15px;
+}
+
+/* フグ料理お品書きレイアウト（画像あり） */
+.menu-fugu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.menu-fugu-item {
+  display: flex;
+  gap: 40px;
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.menu-fugu-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.menu-fugu-img {
+  flex: 1;
+  height: 300px;
+  overflow: hidden;
+}
+
+.menu-fugu-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-fugu-detail {
+  flex: 1.2;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-fugu-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-fugu-price {
+  font-size: 1.3rem;
+  color: var(--color-accent);
+  font-family: var(--font-family-sans);
+}
+
+.menu-fugu-desc {
+  font-size: 1rem;
+  color: var(--text-color-sub);
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .menu-fugu-item,
+  .menu-fugu-item:nth-child(even) {
+    flex-direction: column;
+  }
+  .menu-fugu-img {
+    height: 220px;
+  }
+  .menu-fugu-detail {
+    padding: 25px;
+  }
+  .menu-fugu-name {
+    font-size: 1.4rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+/* 通常メニューレイアウト（和風メニューリスト） */
+.menu-classic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 50px;
+}
+
+.menu-classic-item {
+  border-bottom: 1px dashed var(--color-border);
+  padding-bottom: 15px;
+}
+
+.menu-classic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.menu-classic-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.menu-classic-price {
+  font-family: var(--font-family-sans);
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.menu-classic-desc {
+  font-size: 0.9rem;
+  color: var(--text-color-sub);
+}
+
+@media (max-width: 768px) {
+  .menu-classic-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* お酒セクション */
+.drink-intro-box {
+  background-color: var(--bg-color-sub);
+  border: 1px solid var(--color-border);
+  padding: 30px;
+  border-radius: 6px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.drink-intro-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+/* --- 店舗情報・アクセス (info.html) --- */
+.info-section {
+  padding: 60px 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+}
+
+@media (max-width: 992px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* ギャラリーセクション */
+.gallery-container {
+  margin-top: 50px;
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery-item {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed) ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 20px;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .gallery-item {
+    height: 180px;
+  }
+}
+
+/* モーダル表示 (ギャラリー拡大用) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+  animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.9); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+.modal-close {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color var(--transition-speed);
+}
+
+.modal-close:hover {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+  }
+  .modal-close {
+    top: 15px;
+    right: 20px;
+  }
+}
+
+/* モバイル用ナビゲーションオーバーレイ(メニュー展開時) */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none; /* デスクトップ用メニューは非表示 */
+  }
+
+  .hamburger {
+    display: flex; /* モバイルではハンバーガーを表示 */
+  }
+
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color-main);
+    z-index: 101;
+    transform: translateX(100%);
+    transition: transform var(--transition-speed) cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-overlay.is-open {
+    transform: translateX(0);
+  }
+
+  .nav-overlay-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .nav-overlay-link {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--color-primary);
+  }
+
+  .nav-overlay-link.active {
+    color: var(--color-accent);
+  }
+
+  .nav-overlay-info {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-color-sub);
+    line-height: 1.6;
+  }
+
+  .nav-overlay-sns {
+    margin-top: 20px;
+  }
+
+  .nav-overlay-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    z-index: 103;
+    line-height: 1;
+    padding: 10px;
+  }
+
+  /* モバイル時のフグコース価格サイズ調整 */
+  .fugu-course-price {
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+  }
+  .fugu-course-card-price {
+    font-size: clamp(1.3rem, 6vw, 1.8rem);
+  }
+}
+
+/* フグコース関連スタイル（通常定義） */
+.fugu-course-box {
+  background-color: var(--bg-color-main);
+  border: 1px solid var(--color-border);
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.fugu-course-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 5px;
+}
+.fugu-course-price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--color-accent);
+  margin: 0;
+  font-family: var(--font-family-sans);
+  white-space: nowrap;
+}
+
+.fugu-course-card-wrap {
+  background-color: #ffffff;
+  border: 2px solid var(--color-accent);
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(201, 74, 41, 0.05);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fugu-course-card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 10px;
+  letter-spacing: 0.05em;
+}
+.fugu-course-card-price {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--color-accent);
+  margin: 0;
+  font-family: var(--font-family-sans);
+  white-space: nowrap;
+}
+.fugu-course-card-note {
+  font-size: 0.9rem;
+  color: var(--text-color-sub);
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+

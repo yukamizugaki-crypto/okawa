@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="割烹 大川のお品書きです。完全予約制の新鮮なフグ料理（ふぐ刺し、ふぐちり、ふぐぞうすい）をはじめ、旬のお刺身、手作りの鳥の治部煮、ふんわり卵焼きなど、お酒によく合う本格和食をご提供しています。">
+  <title>お品書き - 割烹 大川</title>
+  <!-- 共通スタイルシート -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-main">割烹 大川</span>
+          <span class="logo-sub">かっぽう おおかわ</span>
+        </a>
+      </div>
+
+      <!-- デスクトップ用ナビゲーション -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">ホーム</a>
+        <a href="menu.html" class="nav-link active">お品書き</a>
+        <a href="info.html" class="nav-link">店舗情報・アクセス</a>
+      </nav>
+
+      <!-- モバイル用ハンバーガーボタン -->
+      <button class="hamburger" aria-label="メニューを開閉する" aria-expanded="false">
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイル用ナビゲーションオーバーレイ -->
+  <div class="nav-overlay">
+    <button class="nav-overlay-close" aria-label="メニューを閉じる">&times;</button>
+    <nav class="nav-overlay-menu">
+      <a href="index.html" class="nav-overlay-link">ホーム</a>
+      <a href="menu.html" class="nav-overlay-link active">お品書き</a>
+      <a href="info.html" class="nav-overlay-link">店舗情報・アクセス</a>
+    </nav>
+    <div class="nav-overlay-info">
+      <p>割烹 大川</p>
+      <p>群馬県桐生市境野町7-1794-2</p>
+      <p>電話: 0277-45-0135</p>
+    </div>
+
+  </div>
+
+  <!-- ページヘッダー -->
+  <section class="page-header">
+    <div class="container">
+      <h1>お品書き</h1>
+      <p>豊富なお酒とよく合う、手作りの本格和食とこだわりのフグ料理</p>
+    </div>
+  </section>
+
+  <!-- フグ料理セクション -->
+  <section class="menu-section" id="fugu">
+    <div class="container">
+      <h2 class="menu-sub-title">フグ料理<span class="badge-reservation">要予約</span></h2>
+      <p style="margin-bottom: 30px; color: var(--text-color-sub);">
+        ※フグ料理は完全予約制となります。仕入れの都合上、ご来店の数日前までにお電話にてご予約をお願いいたします。
+      </p>
+
+      <!-- フグコース価格表示 -->
+      <div class="fugu-course-card-wrap">
+        <h3 class="fugu-course-card-title">フグコース</h3>
+        <p class="fugu-course-card-price">3～4人前&nbsp;&nbsp;14,000円～</p>
+        <p class="fugu-course-card-note">※コース内容はふぐ刺し、ふぐちり、ふぐぞうすい等が含まれます。</p>
+      </div>
+
+      <div class="menu-fugu-list">
+        
+        <!-- ふぐ刺し -->
+        <div class="menu-fugu-item">
+          <div class="menu-fugu-img">
+            <img src="img/fugu_sashi.png" alt="ふぐ刺し">
+          </div>
+          <div class="menu-fugu-detail">
+            <div class="menu-fugu-name">
+              <span>ふぐ刺し（てっさ）</span>
+            </div>
+            <p class="menu-fugu-desc">
+              新鮮なフグの身を、職人が丁寧に薄切りにして大皿に美しく盛り付けました。<br>
+              独特のコリコリとした歯ごたえと、噛むほどに広がるフグの上品な甘みを、自家製ポン酢と薬味でお楽しみください。
+            </p>
+          </div>
+        </div>
+
+        <!-- ふぐちり -->
+        <div class="menu-fugu-item">
+          <div class="menu-fugu-img">
+            <img src="img/fugu_chiri.png" alt="ふぐちり">
+          </div>
+          <div class="menu-fugu-detail">
+            <div class="menu-fugu-name">
+              <span>ふぐちり（てっちり）</span>
+            </div>
+            <p class="menu-fugu-desc">
+              フグの骨付きの身や旬の野菜、豆腐を特製の昆布出汁でじっくり煮込む温かいお鍋です。<br>
+              フグの旨味がスープに溶け出し、ほくほくとしたフグの身を贅沢に味わっていただけます。
+            </p>
+          </div>
+        </div>
+
+        <!-- ふぐぞうすい -->
+        <div class="menu-fugu-item">
+          <div class="menu-fugu-img">
+            <img src="img/fugu_zousui.png" alt="ふぐぞうすい">
+          </div>
+          <div class="menu-fugu-detail">
+            <div class="menu-fugu-name">
+              <span>ふぐぞうすい</span>
+            </div>
+            <p class="menu-fugu-desc">
+              ふぐちりの美味しいお出汁を余すことなく使用した、贅沢な締めの一品です。<br>
+              フグの濃厚な旨味を吸い込んだご飯に、溶き卵と刻みネギを散らし、優しく体に染み渡る味わいに仕上げました。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 刺身料理セクション -->
+  <section class="menu-section">
+    <div class="container">
+      <h2 class="menu-sub-title">刺身料理</h2>
+      <div class="menu-classic-grid">
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">刺身盛り合せ</span>
+          </div>
+          <p class="menu-classic-desc">その日に仕入れた旬の魚介を彩り豊かに盛り合わせます。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">まぐろ刺</span>
+          </div>
+          <p class="menu-classic-desc">新鮮なまぐろをたっぷりと。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">いか刺身</span>
+          </div>
+          <p class="menu-classic-desc">コリコリとした食感が楽しめる、鮮度抜群のいか刺しです。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">たこ刺身</span>
+          </div>
+          <p class="menu-classic-desc">やわらかくボリューム満点のたこ刺しです。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">甘海老</span>
+          </div>
+          <p class="menu-classic-desc">とろける甘みが口いっぱいに広がる甘海老の刺身です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">鰹たたき</span>
+          </div>
+          <p class="menu-classic-desc">藁の香りと旨味が凝縮された豪快な鰹のたたきです。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">鯵酢〆</span>
+          </div>
+          <p class="menu-classic-desc">酢でさっぱりと〆た、お酒によく合う鯵の一品です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">鯵なめろう</span>
+          </div>
+          <p class="menu-classic-desc">味噌と薬味で叩いた、味わい深い房総の郷土料理です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">海鮮サラダ</span>
+          </div>
+          <p class="menu-classic-desc">新鮮な海の幸をたっぷり使ったさっぱりとしたサラダです。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 焼き物セクション -->
+  <section class="menu-section">
+    <div class="container">
+      <h2 class="menu-sub-title">焼き物</h2>
+      <div class="menu-classic-grid">
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">鯵汐焼</span>
+          </div>
+          <p class="menu-classic-desc">塩でシンプルに焼き上げた鯵の旨味をご堪能ください。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">鳥ステーキ</span>
+          </div>
+          <p class="menu-classic-desc">ジューシーに焼き上げた食べ応えある鶏のステーキです。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">鳥塩焼</span>
+          </div>
+          <p class="menu-classic-desc">シンプルな塩味で鶏本来の旨味を引き出した一品です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">いかげそ焼</span>
+          </div>
+          <p class="menu-classic-desc">香ばしく焼いたいかのげそは、お酒がすすむ定番の一品です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">玉子焼</span>
+          </div>
+          <p class="menu-classic-desc">出汁をたっぷり含ませて、職人が丁寧に焼き上げます。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 揚げ物セクション -->
+  <section class="menu-section">
+    <div class="container">
+      <h2 class="menu-sub-title">揚げ物</h2>
+      <div class="menu-classic-grid">
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">海老天ぷら</span>
+          </div>
+          <p class="menu-classic-desc">ぷりぷりの海老をサクサクの衣で揚げた定番の天ぷらです。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">いか天ぷら</span>
+          </div>
+          <p class="menu-classic-desc">いかをふっくらとした衣で揚げました。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">いかげそ天ぷら</span>
+          </div>
+          <p class="menu-classic-desc">いかのげそを香ばしく揚げた、食べ応えのある一品です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">まぐろフライ</span>
+          </div>
+          <p class="menu-classic-desc">外はサクサク、中はジューシーなまぐろのフライです。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">海老フライ</span>
+          </div>
+          <p class="menu-classic-desc">大きな海老をサクッと揚げた、ボリューム満点の一品です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">鯵ふらい</span>
+          </div>
+          <p class="menu-classic-desc">新鮮な鯵をサクサクに揚げた、懐かしい味わいの一品です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">鳥から揚げ</span>
+          </div>
+          <p class="menu-classic-desc">ジューシーでやみつきになる、定番の鶏の唐揚げです。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">鳥竜田揚</span>
+          </div>
+          <p class="menu-classic-desc">醤油ベースのタレで漬け込んだ、香ばしい竜田揚げです。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">揚げ豆腐</span>
+          </div>
+          <p class="menu-classic-desc">外はカリッと、中はふんわりとした揚げ豆腐です。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 冬料理・鍋セクション -->
+  <section class="menu-section">
+    <div class="container">
+      <h2 class="menu-sub-title">冬料理・鍋</h2>
+      <div class="menu-classic-grid">
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">湯どうふ</span>
+          </div>
+          <p class="menu-classic-desc">出汁でやさしく温めたシンプルな湯豆腐です。冬の体を芯から温めてくれます。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- その他・一品セクション -->
+  <section class="menu-section">
+    <div class="container">
+      <h2 class="menu-sub-title">その他・一品</h2>
+      <div class="menu-classic-grid">
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">まぐろ山かけ</span>
+          </div>
+          <p class="menu-classic-desc">まぐろと山芋のとろろを合わせた、さっぱりとした一品です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">まぐろ納豆</span>
+          </div>
+          <p class="menu-classic-desc">まぐろと納豆の相性抜群な組み合わせです。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">川えび</span>
+          </div>
+          <p class="menu-classic-desc">香ばしく風味豊かな川えびの一品です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">鳥時雨煮</span>
+          </div>
+          <p class="menu-classic-desc">甘辛い醤油ダレで煮含めた、ご飯にもお酒にも合う鶏の時雨煮です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">いか納豆</span>
+          </div>
+          <p class="menu-classic-desc">いかと納豆を和えたお酒が進む一品です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">なすチーズ</span>
+          </div>
+          <p class="menu-classic-desc">なすとチーズの組み合わせがクセになる、ちょっと変わった一品です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">焼なす</span>
+          </div>
+          <p class="menu-classic-desc">香ばしく焼き上げたなすに出汁をかけて。さっぱりとした一品です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">山芋焼</span>
+          </div>
+          <p class="menu-classic-desc">ふんわりとした食感が魅力の山芋の鉄板焼きです。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">ゆべし</span>
+          </div>
+          <p class="menu-classic-desc">ちょっとひと休みに。甘みのある和の味わいです。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- お食事セクション -->
+  <section class="menu-section">
+    <div class="container">
+      <h2 class="menu-sub-title">お食事</h2>
+      <div class="menu-classic-grid">
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">刺身定食</span>
+          </div>
+          <p class="menu-classic-desc">新鮮なお刺身盛り合わせを中心とした満足感のある定食です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">天ぷら定食</span>
+          </div>
+          <p class="menu-classic-desc">揚げたての天ぷらが楽しめる定食です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">海老フライ定食</span>
+          </div>
+          <p class="menu-classic-desc">ボリューム満点の海老フライ定食です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">鳥ぞうすい</span>
+          </div>
+          <p class="menu-classic-desc">鶏の旨味がたっぷり染み出た、体に優しい雑炊です。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">梅茶漬け</span>
+          </div>
+          <p class="menu-classic-desc">さっぱりとした梅と出汁のお茶漬けで締めくくりをどうぞ。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">のり茶漬け</span>
+          </div>
+          <p class="menu-classic-desc">香り豊かなのりとあっさり出汁のお茶漬けです。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">茶そば（温・冷）</span>
+          </div>
+          <p class="menu-classic-desc">お茶の香りが広がるのどごし良いお蕎麦。温と冷からお選びいただけます。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">うどん（温・冷）</span>
+          </div>
+          <p class="menu-classic-desc">つるりとしたやわらかいうどんを温と冷でご用意しております。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">ソーメン（温・冷）</span>
+          </div>
+          <p class="menu-classic-desc">細くてつるつるのそうめんを温と冷でどうぞ。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">焼むすび</span>
+          </div>
+          <p class="menu-classic-desc">香ばしく焼き上げた醤油味のおむすびです。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">おむすび</span>
+          </div>
+          <p class="menu-classic-desc">シンプルで懐かしいおむすびです。</p>
+        </div>
+
+        <div class="menu-classic-item">
+          <div class="menu-classic-header">
+            <span class="menu-classic-name">ごはんセット</span>
+          </div>
+          <p class="menu-classic-desc">ご飯と汁物のセットです。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- お酒・お飲み物セクション -->
+  <section class="menu-section">
+    <div class="container">
+      <h2 class="menu-sub-title">お酒・お飲み物</h2>
+
+      <div class="drink-intro-box">
+        <p class="drink-intro-title">料理を引き立てる豊富なお酒をご用意</p>
+        <p style="color: var(--text-color-sub); font-size: 0.95rem;">
+          定番のビールや日本酒・焼酎はもちろん、ふぐひれ酒など季節の銘酒も取り揃えております。<br>
+          ボトルのキープ（お預かり）も承っておりますのでお気軽にどうぞ。
+        </p>
+      </div>
+
+      <!-- 日本酒 -->
+      <h3 class="menu-sub-title" style="font-size: 1.2rem; margin-bottom: 20px; margin-top: 30px;">日本酒</h3>
+      <div class="menu-classic-grid" style="margin-bottom: 40px;">
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">吉乃川</span></div>
+        </div>
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">冷酒 吉乃川</span></div>
+        </div>
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">赤城山</span></div>
+        </div>
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">ふぐひれ酒</span></div>
+        </div>
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">次酒</span></div>
+        </div>
+      </div>
+
+      <!-- 焼酎 -->
+      <h3 class="menu-sub-title" style="font-size: 1.2rem; margin-bottom: 20px;">焼酎</h3>
+      <div class="menu-classic-grid" style="margin-bottom: 40px;">
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">鏡月</span></div>
+        </div>
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">いいちこ</span></div>
+        </div>
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">黒霧島</span></div>
+        </div>
+      </div>
+
+      <!-- ビール -->
+      <h3 class="menu-sub-title" style="font-size: 1.2rem; margin-bottom: 20px;">生ビール</h3>
+      <div class="menu-classic-grid" style="margin-bottom: 40px;">
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">アサヒビール</span></div>
+        </div>
+      </div>
+
+      <!-- ウイスキー -->
+      <h3 class="menu-sub-title" style="font-size: 1.2rem; margin-bottom: 20px;">ウイスキー</h3>
+      <div class="menu-classic-grid" style="margin-bottom: 40px;">
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">リザーブ</span></div>
+        </div>
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">サントリー角</span></div>
+        </div>
+      </div>
+
+      <!-- ワイン -->
+      <h3 class="menu-sub-title" style="font-size: 1.2rem; margin-bottom: 20px;">ワイン</h3>
+      <div class="menu-classic-grid" style="margin-bottom: 40px;">
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">ワイン</span></div>
+        </div>
+      </div>
+
+      <!-- ジュース・ソフトドリンク -->
+      <h3 class="menu-sub-title" style="font-size: 1.2rem; margin-bottom: 20px;">ジュース・ソフトドリンク</h3>
+      <div class="menu-classic-grid" style="margin-bottom: 20px;">
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">コーラ</span></div>
+        </div>
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">オレンジ</span></div>
+        </div>
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">ジンジャーエール</span></div>
+        </div>
+        <div class="menu-classic-item">
+          <div class="menu-classic-header"><span class="menu-classic-name">ウーロン茶</span></div>
+        </div>
+      </div>
+
+      <p style="font-size: 0.9rem; color: var(--color-accent); font-weight: bold; margin-top: 20px;">
+        ※ボトルのキープ（お預かり）致します。
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- フッター -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-info">
+        <div class="logo" style="margin-bottom: 20px;">
+          <a href="index.html">
+            <span class="logo-main">割烹 大川</span>
+            <span class="logo-sub" style="color: #b0c4de;">かっぽう おおかわ</span>
+          </a>
+        </div>
+        <p>〒376-0002 群馬県桐生市境野町7-1794-2</p>
+        <p>電話: 0277-45-0135</p>
+        <p>営業時間: 18:00～22:00（定休日: 水・木）</p>
+      </div>
+      
+      <div class="footer-links">
+        <h3>リンク</h3>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="menu.html">お品書き</a></li>
+          <li><a href="info.html">店舗情報・アクセス</a></li>
+        </ul>
+      </div>
+      
+
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2026 割烹 大川. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 共通スクリプト -->
+  <script src="script.js"></script>
+</body>
+</html>

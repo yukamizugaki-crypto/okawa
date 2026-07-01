@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="群馬県桐生市境野町にある「割烹 大川」の公式ホームページです。活気ある店内で豊富なお酒と本格的な和食をお楽しみいただけます。完全予約制の絶品フグ料理をはじめ、お刺身、鳥の治部煮など自慢の逸品をご用意しております。">
+  <title>割烹 大川 - 桐生市の居酒屋割烹・フグ料理</title>
+  <!-- 共通スタイルシート -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-main">割烹 大川</span>
+          <span class="logo-sub">かっぽう おおかわ</span>
+        </a>
+      </div>
+
+      <!-- デスクトップ用ナビゲーション -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">ホーム</a>
+        <a href="menu.html" class="nav-link">お品書き</a>
+        <a href="info.html" class="nav-link">店舗情報・アクセス</a>
+      </nav>
+
+      <!-- モバイル用ハンバーガーボタン -->
+      <button class="hamburger" aria-label="メニューを開閉する" aria-expanded="false">
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイル用ナビゲーションオーバーレイ -->
+  <div class="nav-overlay">
+    <button class="nav-overlay-close" aria-label="メニューを閉じる">&times;</button>
+    <nav class="nav-overlay-menu">
+      <a href="index.html" class="nav-overlay-link active">ホーム</a>
+      <a href="menu.html" class="nav-overlay-link">お品書き</a>
+      <a href="info.html" class="nav-overlay-link">店舗情報・アクセス</a>
+    </nav>
+    <div class="nav-overlay-info">
+      <p>割烹 大川</p>
+      <p>群馬県桐生市境野町7-1794-2</p>
+      <p>電話: 0277-45-0135</p>
+    </div>
+
+  </div>
+
+  <!-- メインビジュアル -->
+  <section class="hero">
+    <img src="img/ふぐイメージ.png" alt="割烹 大川 ふぐイメージ" class="hero-bg">
+    <div class="hero-content">
+      <p class="hero-tagline">桐生で楽しむ本格和食と豊富なお酒</p>
+      <h1 class="hero-title">割烹 大川</h1>
+      <p class="hero-tagline">活気ある空間で心地よいひとときを</p>
+    </div>
+  </section>
+
+  <!-- メッセージセクション -->
+  <section class="section-padding">
+    <div class="container text-center">
+      <div class="intro-text-box">
+        <p class="intro-lead">活気ある空間と豊富なお酒を楽しむ居酒屋割烹</p>
+        <p class="intro-desc">
+          「割烹 大川」は、肩肘張らずに本格的な和食を楽しめる居酒屋割烹です。<br>
+          店内はいつも活気に満ちており、初めてのお客様もアットホームな雰囲気でお迎えいたします。<br>
+          全国から厳選した種類豊富なお酒を取り揃えており、料理に合わせた一杯をご堪能いただけます。
+        </p>
+        <p class="intro-desc">
+          お刺身の盛り合わせや鳥の治部煮、ふんわり焼き上げた卵焼きなどの一品料理から、<br>
+          締めにはさっぱりとした茶蕎麦やそうめんまで、幅広い和食メニューをご用意しております。
+        </p>
+        <a href="menu.html" class="btn">お品書きを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- フグ料理特集セクション (大々的に打ち出し) -->
+  <section class="section-padding fugu-featured-section">
+    <div class="container">
+      <h2 class="section-title">当店自慢のフグ料理</h2>
+      
+      <div class="fugu-featured-card">
+        <div class="fugu-featured-img" style="background-image: url('img/ふぐ看板.png');"></div>
+        <div class="fugu-featured-content">
+          <span class="fugu-featured-badge">完全予約制</span>
+          <h3 class="fugu-featured-title">厳選されたフグを贅沢に味わう</h3>
+          <p class="fugu-featured-desc">
+            割烹 大川では、新鮮なフグ料理をご提供しております。<br>
+            職人が丁寧にひく繊細な「ふぐ刺し」、旨味が凝縮された身を温かい出汁で楽しむ「ふぐちり」、そして旨味を余すことなく閉じ込めた締めの「ふぐぞうすい」など、フグの魅力を存分に引き出した品々をご堪能ください。
+          </p>
+          <div class="fugu-course-box">
+            <p class="fugu-course-label">フグコース</p>
+            <p class="fugu-course-price">3～4人前&nbsp;&nbsp;14,000円～</p>
+          </div>
+          <p class="text-accent" style="font-weight: bold; margin-bottom: 20px; font-size: 0.95rem;">
+            ※フグ料理は食材管理と品質保持のため、完全予約制とさせていただいております。必ず事前にお電話にてご予約をお願いいたします。
+          </p>
+          <div class="fugu-featured-btn-wrap">
+            <a href="menu.html#fugu" class="btn">フグ料理の詳細を見る</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- フグ3点プレビュー -->
+      <div class="fugu-preview-grid">
+        <div class="fugu-preview-item">
+          <div class="fugu-preview-img-wrap">
+            <img src="img/fugu_sashi.png" alt="ふぐ刺し">
+          </div>
+          <div class="fugu-preview-info">
+            <h4 class="fugu-preview-name">ふぐ刺し</h4>
+            <p class="fugu-preview-text">美しく盛り付けられた透き通る身のコリコリとした食感</p>
+          </div>
+        </div>
+        <div class="fugu-preview-item">
+          <div class="fugu-preview-img-wrap">
+            <img src="img/fugu_chiri.png" alt="ふぐちり">
+          </div>
+          <div class="fugu-preview-info">
+            <h4 class="fugu-preview-name">ふぐちり</h4>
+            <p class="fugu-preview-text">フグの出汁がたっぷり染み出た贅沢な温かいお鍋</p>
+          </div>
+        </div>
+        <div class="fugu-preview-item">
+          <div class="fugu-preview-img-wrap">
+            <img src="img/fugu_zousui.png" alt="ふぐぞうすい">
+          </div>
+          <div class="fugu-preview-info">
+            <h4 class="fugu-preview-name">ふぐぞうすい</h4>
+            <p class="fugu-preview-text">フグと野菜の旨味を最後の一滴まで楽しむ極上の締め</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- 簡易店舗情報 & アクセス -->
+  <section class="section-padding home-info-section">
+    <div class="container">
+      <h2 class="section-title">営業案内</h2>
+      
+      <div class="home-info-columns">
+        <div>
+          <table class="home-info-table">
+            <tbody>
+              <tr>
+                <th>店名</th>
+                <td>割烹 大川</td>
+              </tr>
+              <tr>
+                <th>所在地</th>
+                <td>〒376-0002 群馬県桐生市境野町7-1794-2</td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td><a href="tel:0277-45-0135" style="color: inherit; text-decoration: underline;">0277-45-0135</a></td>
+              </tr>
+              <tr>
+                <th>営業時間</th>
+                <td>18:00～22:00</td>
+              </tr>
+              <tr>
+                <th>定休日</th>
+                <td>水曜日・木曜日</td>
+              </tr>
+              <tr>
+                <th>ご予約</th>
+                <td>ご予約はお電話からお願いいたします。</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 30px;">
+            <a href="info.html" class="btn">詳しい店舗情報・アクセス</a>
+          </div>
+        </div>
+        
+        <div>
+          <!-- 地図 (プレースホルダーまたは簡単な案内。今回は桐生市境野町の簡易案内) -->
+          <div class="home-info-map-wrap">
+            <!-- Google Maps iframe を埋め込む (桐生市境野町7-1794-2の位置) -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3209.7027581177607!2d139.36224347715367!3d36.3800689916238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f464016d9059f%3A0xf8aa94d90693f6e3!2z5Ymy54G5IOWkp-W3dA!5e0!3m2!1sja!2sjp!4v1719810000000!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-info">
+        <div class="logo" style="margin-bottom: 20px;">
+          <a href="index.html">
+            <span class="logo-main">割烹 大川</span>
+            <span class="logo-sub" style="color: #b0c4de;">かっぽう おおかわ</span>
+          </a>
+        </div>
+        <p>〒376-0002 群馬県桐生市境野町7-1794-2</p>
+        <p>電話: 0277-45-0135</p>
+        <p>営業時間: 18:00～22:00（定休日: 水・木）</p>
+      </div>
+      
+      <div class="footer-links">
+        <h3>リンク</h3>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="menu.html">お品書き</a></li>
+          <li><a href="info.html">店舗情報・アクセス</a></li>
+        </ul>
+      </div>
+      
+
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2026 割烹 大川. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 共通スクリプト -->
+  <script src="script.js"></script>
+</body>
+</html>

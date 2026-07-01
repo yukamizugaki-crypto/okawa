@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="割烹 大川の店舗情報およびアクセス案内です。群馬県桐生市境野町に位置し、アットホームで活気ある店内の写真をご覧いただけます。お車や公共交通機関でのアクセス方法、ご予約方法について掲載しています。">
+  <title>店舗情報・アクセス - 割烹 大川</title>
+  <!-- 共通スタイルシート -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-main">割烹 大川</span>
+          <span class="logo-sub">かっぽう おおかわ</span>
+        </a>
+      </div>
+
+      <!-- デスクトップ用ナビゲーション -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">ホーム</a>
+        <a href="menu.html" class="nav-link">お品書き</a>
+        <a href="info.html" class="nav-link active">店舗情報・アクセス</a>
+      </nav>
+
+      <!-- モバイル用ハンバーガーボタン -->
+      <button class="hamburger" aria-label="メニューを開閉する" aria-expanded="false">
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイル用ナビゲーションオーバーレイ -->
+  <div class="nav-overlay">
+    <button class="nav-overlay-close" aria-label="メニューを閉じる">&times;</button>
+    <nav class="nav-overlay-menu">
+      <a href="index.html" class="nav-overlay-link">ホーム</a>
+      <a href="menu.html" class="nav-overlay-link">お品書き</a>
+      <a href="info.html" class="nav-overlay-link active">店舗情報・アクセス</a>
+    </nav>
+    <div class="nav-overlay-info">
+      <p>割烹 大川</p>
+      <p>群馬県桐生市境野町7-1794-2</p>
+      <p>電話: 0277-45-0135</p>
+    </div>
+
+  </div>
+
+  <!-- ページヘッダー -->
+  <section class="page-header">
+    <div class="container">
+      <h1>店舗情報・アクセス</h1>
+      <p>割烹 大川の基本情報、店内の様子、アクセス方法のご案内</p>
+    </div>
+  </section>
+
+  <!-- 店舗詳細情報セクション -->
+  <section class="info-section">
+    <div class="container">
+      <div class="info-grid">
+        
+        <!-- 店舗基本情報テーブル -->
+        <div>
+          <h2 class="menu-sub-title" style="margin-bottom: 20px;">店舗基本情報</h2>
+          <table class="home-info-table">
+            <tbody>
+              <tr>
+                <th>店名</th>
+                <td>割烹 大川</td>
+              </tr>
+              <tr>
+                <th>所在地</th>
+                <td>〒376-0002 群馬県桐生市境野町7-1794-2</td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td><a href="tel:0277-45-0135" style="color: inherit; text-decoration: underline;">0277-45-0135</a></td>
+              </tr>
+              <tr>
+                <th>営業時間</th>
+                <td>18:00～22:00</td>
+              </tr>
+              <tr>
+                <th>定休日</th>
+                <td>水曜日・木曜日</td>
+              </tr>
+              <tr>
+                <th>お支払方法</th>
+                <td>現金、各種クレジットカードがご利用いただけます。</td>
+              </tr>
+              <tr>
+                <th>駐車場</th>
+                <td>店舗横に専用駐車場がございます（約5台分）。</td>
+              </tr>
+              <tr>
+                <th>ご予約について</th>
+                <td>
+                  ご予約はお電話からお願いいたします。<br>
+                  フグ料理は完全予約制となりますので、事前にご予約の旨をお伝えください。
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <!-- アクセス方法 -->
+        <div>
+          <h2 class="menu-sub-title" style="margin-bottom: 20px;">アクセス方法</h2>
+          
+          <div style="margin-bottom: 25px;">
+            <h3 style="font-size: 1.1rem; color: var(--color-primary); margin-bottom: 8px;">お車でお越しの場合</h3>
+            <p style="font-size: 0.95rem; color: var(--text-color-sub); line-height: 1.6;">
+              北関東自動車道 太田桐生ICより車で約20分。<br>
+              群馬県道・栃木県道67号桐生岩舟線（旧国道50号）から境野町方面へ進み、境野町7丁目の交差点を目印にお越しください。店舗横に駐車場を完備しております。
+            </p>
+          </div>
+
+          <div style="margin-bottom: 25px;">
+            <h3 style="font-size: 1.1rem; color: var(--color-primary); margin-bottom: 8px;">電車でお越しの場合</h3>
+            <p style="font-size: 0.95rem; color: var(--text-color-sub); line-height: 1.6;">
+              JR両毛線 「小俣駅」よりタクシーで約5分、または徒歩約20分。<br>
+              東武桐生線 「新桐生駅」よりタクシーで約10分。
+            </p>
+          </div>
+
+          <!-- 地図埋め込み -->
+          <div class="home-info-map-wrap" style="height: 320px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3209.7027581177607!2d139.36224347715367!3d36.3800689916238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f464016d9059f%3A0xf8aa94d90693f6e3!2z5Ymy54G5IOWkp-W3dA!5e0!3m2!1sja!2sjp!4v1719810000000!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 店内の雰囲気・フォトギャラリー -->
+      <div class="gallery-container">
+        <h2 class="menu-sub-title text-center" style="border: none; padding-left: 0; margin-bottom: 10px;">店内の雰囲気</h2>
+        <p class="text-center" style="color: var(--text-color-sub); font-size: 0.95rem;">
+          木の温もりが感じられる、活気あふれる心地よい空間です。<br>
+          お一人様からご家族連れ、ご宴会まで幅広いシーンでご利用いただけます。写真をタップすると拡大してご覧いただけます。
+        </p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="img/店内1.webp" alt="割烹 大川 店内の様子 1">
+          </div>
+          <div class="gallery-item">
+            <img src="img/店内2.webp" alt="割烹 大川 店内の様子 2">
+          </div>
+          <div class="gallery-item">
+            <img src="img/店内3.webp" alt="割烹 大川 店内の様子 3">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 拡大画像表示用モーダル -->
+  <div class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <!-- フッター -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-info">
+        <div class="logo" style="margin-bottom: 20px;">
+          <a href="index.html">
+            <span class="logo-main">割烹 大川</span>
+            <span class="logo-sub" style="color: #b0c4de;">かっぽう おおかわ</span>
+          </a>
+        </div>
+        <p>〒376-0002 群馬県桐生市境野町7-1794-2</p>
+        <p>電話: 0277-45-0135</p>
+        <p>営業時間: 18:00～22:00（定休日: 水・木）</p>
+      </div>
+      
+      <div class="footer-links">
+        <h3>リンク</h3>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="menu.html">お品書き</a></li>
+          <li><a href="info.html">店舗info・アクセス</a></li>
+        </ul>
+      </div>
+      
+
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2026 割烹 大川. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 共通スクリプト -->
+  <script src="script.js"></script>
+</body>
+</html>
